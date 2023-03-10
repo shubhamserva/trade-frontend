@@ -5,7 +5,6 @@ import Loader from './components/Loader/Loader';
 import AdminLayout from './layouts/AdminLayout';
 
 import GuestGuard from './components/Auth/GuestGuard';
-import AuthGuard from './components/Auth/AuthGuard';
 
 import { BASE_URL } from './config/constant';
 
@@ -65,6 +64,16 @@ const routes = [
                 exact: true,
                 path: '/app/dashboard/default',
                 component: lazy(() => import('./views/dashboard/DashDefault'))
+            },
+            {
+                exact: true,
+                path: '/upload',
+                component: lazy(() => import('./views/ui-elements/basic/upload'))
+            },
+            {
+                exact: true,
+                path: '/view',
+                component: lazy(() => import('./views/ui-elements/basic/BasicBadges'))
             },
             {
                 path: '*',

@@ -21,6 +21,7 @@ const NavRight = () => {
     const [listOpen, setListOpen] = useState(false);
 
     const handleLogout = () => {
+        
         axios
             .post(API_SERVER + 'users/logout', {}, { headers: { Authorization: `${account.token}` } })
             .then(function (response) {

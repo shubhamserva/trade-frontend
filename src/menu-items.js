@@ -22,17 +22,17 @@ const menuItems = {
             icon: 'icon-group',
             children: [
                 {
-                    id: 'forms',
-                    title: 'upload',
+                    id: 'upload',
+                    title: 'Upload',
                     type: 'item',
-                    url: '/forms/form-basic',
+                    url: '/upload',
                     icon: 'feather icon-file-text'
                 },
                 {
-                    id: 'bootstrap',
+                    id: 'view',
                     title: 'View',
                     type: 'item',
-                    url: '/tables/bootstrap',
+                    url: '/view',
                     icon: 'feather icon-server'
                 }
             ]

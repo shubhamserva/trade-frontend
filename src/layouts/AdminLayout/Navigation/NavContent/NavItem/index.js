@@ -9,7 +9,7 @@ import { ConfigContext } from '../../../../../contexts/ConfigContext';
 import * as actionType from '../../../../../store/actions';
 import useWindowSize from '../../../../../hooks/useWindowSize';
 
-const NavItem = ({ layout, item }) => {
+const  NavItem = ({ layout, item }) => {
     const windowSize = useWindowSize();
     const configContext = useContext(ConfigContext);
     const { dispatch } = configContext;
