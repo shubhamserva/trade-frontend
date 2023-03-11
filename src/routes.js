@@ -5,7 +5,7 @@ import Loader from './components/Loader/Loader';
 import AdminLayout from './layouts/AdminLayout';
 
 import GuestGuard from './components/Auth/GuestGuard';
-
+import AuthGuard from './components/Auth/AuthGuard';
 import { BASE_URL } from './config/constant';
 
 export const renderRoutes = (routes = []) => (
@@ -59,6 +59,7 @@ const routes = [
     {
         path: '*',
         layout: AdminLayout,
+        guard: AuthGuard,
         routes: [
             {
                 exact: true,
