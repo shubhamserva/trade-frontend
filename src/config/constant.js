@@ -1,7 +1,7 @@
 let BACKEND_SERVER = null;
 
-//BACKEND_SERVER = "http://68.183.95.182:5000/api/";
-BACKEND_SERVER = "http://localhost:5000/api/"
+BACKEND_SERVER = "http://68.183.95.182:5000/api/";
+//BACKEND_SERVER = "http://localhost:5000/api/"
 
 
 export const BASENAME = ''; // don't add '/' at end off BASENAME
