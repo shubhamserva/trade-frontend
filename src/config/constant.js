@@ -1,12 +1,13 @@
 let BACKEND_SERVER = null;
 
-BACKEND_SERVER = "https://174.138.123.228:5000/api/";
+//BACKEND_SERVER = "https://174.138.123.228:5000/api/";
 //BACKEND_SERVER = "http://localhost:5000/api/"
+BACKEND_SERVER = "http://68.183.95.182:5000/api/"
 
 
 export const BASENAME = ''; // don't add '/' at end off BASENAME
 export const BASE_URL = '/app/dashboard/default';
-export const BASE_TITLE = ' | React Datta Able ';
+export const BASE_TITLE = ' | Trade on the house ';
 export const API_SERVER = BACKEND_SERVER;
 
 export const CONFIG = {
