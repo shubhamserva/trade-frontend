@@ -1,4 +1,5 @@
 import React from 'react';
+import  https from 'https';
 import { useDispatch } from 'react-redux';
 import { Row, Col, Button, Alert } from 'react-bootstrap';
 
@@ -9,9 +10,17 @@ import useScriptRef from '../../../hooks/useScriptRef';
 import { API_SERVER } from './../../../config/constant';
 import { ACCOUNT_INITIALIZE } from './../../../store/actions';
 
+const agent = new https.Agent({
+    rejectUnauthorized: false
+  });
+
 const RestLogin = ({ className, ...rest }) => {
     const dispatcher = useDispatch();
     const scriptedRef = useScriptRef();
+
+    const agent = new https.Agent({
+        rejectUnauthorized: false
+      });
 
     return (
         <React.Fragment>
@@ -28,7 +37,7 @@ const RestLogin = ({ className, ...rest }) => {
                 onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
                     try {
                         axios
-                            .post(API_SERVER + 'users/login', {
+                            .post(API_SERVER + 'users/login', {httpsAgent: agent},{
                                 password: values.password,
                                 email: values.email
                             })
