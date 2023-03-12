@@ -22,16 +22,7 @@ const BasicBadges = () => {
 
             <Row>
                 <Col className="btn-page">
-                    <Card title="Basic Badges">
-                        <h1>
-                            Example heading <Badge variant="secondary">New</Badge>
-                        </h1>
-                        <h2>
-                            Example heading <Badge variant="secondary">New</Badge>
-                        </h2>
-
-                    </Card>
-                    <Card title="Button Badges">{buttonBadges}</Card>
+                    <Card title="Trade Data">{buttonBadges}</Card>
 
                 </Col>
             </Row>

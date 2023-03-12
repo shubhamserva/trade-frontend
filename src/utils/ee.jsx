@@ -6,8 +6,8 @@ function ExcelFileInput() {
   const [data, setData] = useState(null);
 
   const handleFileChange = (e) => {
-    const selectedFile = e.target.files[0];
-    if (selectedFile.type === "application/vnd.ms-excel") {
+    const selectedFile = e.target.files[0];  
+    if (selectedFile?.type === "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
       setFile(selectedFile);
 
       const reader = new FileReader();

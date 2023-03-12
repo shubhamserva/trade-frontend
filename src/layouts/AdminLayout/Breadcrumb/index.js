@@ -79,7 +79,7 @@ const Breadcrumb = () => {
             );
         }
 
-        document.title = title + BASE_TITLE;
+        document.title = "Trade on the House";
     }
 
     return <React.Fragment>{breadcrumbContent}</React.Fragment>;
