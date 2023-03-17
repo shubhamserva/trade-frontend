@@ -37,10 +37,10 @@ const RestLogin = ({ className, ...rest }) => {
                 onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
                     try {
                         axios
-                            .post(API_SERVER + 'users/login', {httpsAgent: agent},{
+                            .post(API_SERVER + 'users/login',{
                                 password: values.password,
                                 email: values.email
-                            })
+                            }) 
                             .then(function (response) {
                                 if (response.data.success) {
                                     console.log(response.data);
