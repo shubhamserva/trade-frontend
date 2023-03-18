@@ -22,6 +22,13 @@ const RestLogin = ({ className, ...rest }) => {
         rejectUnauthorized: false
       });
 
+      let config = {
+        headers: {
+          "Content-Type": "application/json",
+          'Access-Control-Allow-Origin': '*',
+          }
+        }
+
     return (
         <React.Fragment>
             <Formik
@@ -40,7 +47,7 @@ const RestLogin = ({ className, ...rest }) => {
                             .post(API_SERVER + 'users/login',{
                                 password: values.password,
                                 email: values.email
-                            }) 
+                            }, config) 
                             .then(function (response) {
                                 if (response.data.success) {
                                     console.log(response.data);
